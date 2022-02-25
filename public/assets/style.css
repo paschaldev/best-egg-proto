@@ -1,0 +1,65 @@
+:root {
+  --animate-delay: 0.5s;
+}
+
+body {
+  margin: 0;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-color: #092951;
+}
+
+.hero,
+.hero__cutout__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.hero__cutout {
+  width: 50%;
+  display: flex;
+  height: 0;
+  padding: 20% 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero__cutout__container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__cutout__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  mask-image: url('/assets/shape.png');
+  mask-repeat: no-repeat;
+  mask-size: 70%;
+  mask-position: center;
+}
+
+.hero__cutout img,
+.hero__cutout video {
+  width: 100%;
+}
+
+.hero__animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
